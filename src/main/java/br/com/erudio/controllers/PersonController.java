@@ -30,8 +30,8 @@ public class PersonController {
             produces = {MediaType.APPLICATION_JSON,
                     MediaType.APPLICATION_XML,
                     MediaType.APPLICATION_YML})
-    public PersonVO findByID(@PathVariable(value = "id") String id) throws Exception{
-            return service.findById(id);
+    public PersonVO findByID(@PathVariable(value = "id") String id){
+            return service.findById(Long.valueOf(id));
     }
 
     @PostMapping(
@@ -57,8 +57,8 @@ public class PersonController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<?> deletePerson(@PathVariable(value = "id") String id) throws Exception{
-        service.deletePerson(id);
+    public ResponseEntity<?> deletePerson(@PathVariable(value = "id") String id){
+        service.deletePerson(Long.valueOf(id));
         return ResponseEntity.noContent().build();
     }
 

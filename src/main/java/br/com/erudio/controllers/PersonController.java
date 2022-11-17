@@ -5,8 +5,6 @@ import br.com.erudio.data.vo.v1.PersonVO;
 import br.com.erudio.services.PersonServices;
 import br.com.erudio.util.MediaType;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -19,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-
+//@CrossOrigin
 @RestController
 @RequestMapping("/api/person/v1")
 @Tag(name = "People", description = "Endpoints for Managing People")
@@ -50,7 +48,7 @@ public class PersonController {
     public List<PersonVO> findAll(){
         return service.findAll();
     }
-
+    @CrossOrigin(origins = {"http://localhost:8080","http://erudio.com.br"})
     @GetMapping(value = "/{id}",
             produces = {MediaType.APPLICATION_JSON,
                     MediaType.APPLICATION_XML,
@@ -72,6 +70,7 @@ public class PersonController {
             return service.findById(Long.valueOf(id));
     }
 
+    @CrossOrigin(origins = {"http://localhost:8080","http://erudio.com.br"})
     @PostMapping(
             produces = {MediaType.APPLICATION_JSON,
                     MediaType.APPLICATION_XML,

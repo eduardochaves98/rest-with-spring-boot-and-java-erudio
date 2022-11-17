@@ -52,11 +52,11 @@ class BookServicesTest {
 
 //        people
 //                .forEach(p -> {
-//                    assertTrue(p.toString().contains("</api/person/v1/" + p.getKey() +">"));
-//                    assertEquals("Addres Test" + p.getKey(),p.getAddress());
-//                    assertEquals("First Name Test" + p.getKey(),p.getFirstName());
-//                    assertEquals("Last Name Test" + p.getKey(),p.getLastName());
-//                    assertEquals(((p.getKey() % 2)==0) ? "Male" : "Female",p.getGender());
+//                    assertTrue(p.toString().contains("</api/person/v1/" + p.getId() +">"));
+//                    assertEquals("Addres Test" + p.getId(),p.getAddress());
+//                    assertEquals("First Name Test" + p.getId(),p.getFirstName());
+//                    assertEquals("Last Name Test" + p.getId(),p.getLastName());
+//                    assertEquals(((p.getId() % 2)==0) ? "Male" : "Female",p.getGender());
 //                });
         for (int i = 0; i < 14; i++) {
             BookVO p = books.get(i);

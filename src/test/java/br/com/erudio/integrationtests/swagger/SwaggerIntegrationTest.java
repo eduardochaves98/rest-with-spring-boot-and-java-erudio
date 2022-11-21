@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import br.com.erudio.configs.TestConfigs;
 import br.com.erudio.integrationtests.testcontainers.AbstractIntegrationTest;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

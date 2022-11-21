@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.dozermapper.core.Mapping;
 import org.springframework.hateoas.RepresentationModel;
+import org.springframework.lang.Nullable;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -68,7 +69,7 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(@Nullable Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
